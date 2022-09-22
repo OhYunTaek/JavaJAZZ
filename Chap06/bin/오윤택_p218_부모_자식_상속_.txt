@@ -1,0 +1,66 @@
+오윤택_p218_부모_자식_상속
+
+부모)
+/*
+ * Code By OhYunTaek 2022.09.21(수)
+ */
+public class p218IceBall {
+    private void secret() {
+        System.out.println("비밀");
+    }
+
+    protected void findRadius() {
+        System.out.println("반지름이 100CM 이다");
+    }
+
+    public void findArea() {
+        System.out.println("넓이는 (3.14*반지름*반지름)이다");
+    }
+}
+
+
+
+
+자식)
+/*
+ * Code By OhYunTaek 2022.09.21(수)
+ */
+public class p218IceBall2 extends p218IceBall {
+    private String color;
+
+    public p218IceBall2(String color) {
+        this.color = color;
+    }
+
+    protected void findColor() {
+        System.out.println(color + " 색 얼음구체이다");
+    }
+
+    public void findVolume() {
+        System.out.println("부피는 4/3*(3.14*반지름*반지름*반지름)이다");
+    }
+}
+
+
+
+
+상속)
+/*
+ * Code By OhYunTaek 2022.09.21(수)
+ */
+public class p218IceBall3 {
+    public static void main(String[] args) {
+        p218IceBall b1 = new p218IceBall();
+        p218IceBall2 b2 = new p218IceBall2("파랑");
+
+        System.out.println("사이즈 : ");
+        b1.findRadius();
+        b1.findArea();
+
+        System.out.println("\n아이스 볼 : ");
+        b2.findRadius();
+        b2.findColor();
+        b2.findArea();
+        b2.findVolume();
+    }
+}
